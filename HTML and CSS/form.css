@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+.form {
+  font-family: "Delicious Handrawn", sans-serif;
+  background: white;
+  max-width: 560px;
+  margin: auto;
+  margin-top: 7%;
+  margin-left: 42%;
+  padding: 50px;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.create{
+    margin-top: 5%;
+}
+
+.form h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.form input {
+  font-family: "Delicious Handrawn", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 90%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 24px;
+  
+}
+.form textarea {
+  border: 1px solid rgb(206, 206, 206);
+  width: 90%;
+  max-width: 99%;
+  min-width: 90%;
+  min-height: 50px;
+  margin-bottom: 10px;
+  background-color: rgb(242, 242, 242);
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: 0;
+  background: #336087;
+  width: 50%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: rgb(161, 211, 168);
+}
+
+.form .register-form {
+  display: none;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #336087;
+  font-size: 26px;
+}
+.form .message a {
+  color: darkblue;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.form .message a:hover{
+    color: rgb(161, 211, 168)
+}
+
+.form-info{
+    text-align: left;
+    font-size: 24px;
+    margin: 0;
+    margin-left: 14px;
+    margin-bottom: 10px;
+}

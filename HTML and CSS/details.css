@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+.details-container{
+    background: rgba(7, 15, 20, 0.9);
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+.img-background{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 75%;
+    position: sticky;
+    top: 5%;
+}
+.details-info{
+    margin-top: 2%;
+    width: 25%;
+}
+
+.img-background img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+    border: 2px solid #15133d;
+    border-radius: 2%;
+}
+
+/* Aside Bar */
+
+.details-info{
+    font-family: "Delicious Handrawn", sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.buttons{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.likes-count{
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.buttons .btn-like, .buttons .btn-delete, .buttons .btn-edit{
+    width: 44%;
+    height: 40px;
+    margin: 8px;
+    margin-left: 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+.buttons .btn-like{
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.buttons .btn-like:hover{
+    background-color: #449c61
+}
+
+.buttons .btn-delete{
+    background-color: #c45454;
+    border-color: #b44a4a;
+}
+
+.buttons .btn-delete:hover{
+    background-color: #973834
+}
+
+.buttons .btn-edit{
+    background-color: #13aff0;
+    border-color: #0e9fdc;
+}
+
+.buttons .btn-edit:hover{
+    background-color: #1243c9
+}
+
+
+
+.details-info .author{
+    font-size: 48px;
+}
+
+.details-info .title{
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+.details-info .desc{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-right: 2%;
+}
+
+.software img{
+    width: 24px;
+    height: 24px;
+}
+
+.software p{
+    margin-bottom: 5px;
+    margin-top: 1px;
+}

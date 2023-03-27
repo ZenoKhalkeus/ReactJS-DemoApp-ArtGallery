@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <a id="logo" href="/"
+          ><img id="logo-img" src="./images/logo.png" alt=""
+        /></a>
+
+        <nav>
+          <div>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Search</a>
+          </div>
+
+          <!-- Logged-in users -->
+          <div class="user">
+            <a href="create.html">Upload</a>
+            <a href="#">Collection</a>
+            <a href="#">Logout</a>
+          </div>
+
+          <!-- Guest users -->
+          <div class="guest">
+            <a href="nav.html">Login</a>
+            <a href="register.html">Register</a>
+          </div>
+        </nav>
+      </header>
+
+    <section id="create">
+        <div class="form create">
+          <h2>Add an artwork</h2>
+          <form class="create-form">
+            <p class="form-info">Title</p>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Lady with a pearl earring"
+            />
+            <p class="form-info">Summary</p>
+            <input
+              type="text"
+              name="summary"
+              id="summary"
+              placeholder="Summary of the piece"
+            />
+            <p class="form-info">Image Url</p>
+            <input
+              type="text"
+              name="imageUrl"
+              id="img-background"
+              placeholder="www.lorem.lorem.png"
+            />
+            <p class="form-info">Software used</p>
+            <input
+              type="text"
+              name="software"
+              id="software"
+              placeholder="Photoshop"
+            />
+        
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <p>Art Gallery &copy All Rights reserved </p>
+      </footer>
+</body>
+</html>
