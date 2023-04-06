@@ -1,6 +1,6 @@
 body {
     color: rgb(68, 67, 67);
-    background: url(images/background.jpg);
+    background: url(/images/background.jpg);
     background-size: cover;
     background-position: 10% 5%;
     margin: 0;
@@ -63,5 +63,14 @@ body {
   
   section {
     margin-bottom: 100px;
+  }
+
+  .greeting {
+    color: teal;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: auto;
+    margin-top: 0.5%;
+    margin-right: 0.5%;
   }
   
