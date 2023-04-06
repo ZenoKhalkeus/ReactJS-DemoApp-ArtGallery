@@ -98,13 +98,14 @@
 }
 .details-info .desc{
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     margin-right: 2%;
 }
 
 .software img{
     width: 24px;
     height: 24px;
+    margin-right: 10px;
 }
 
 .software p{

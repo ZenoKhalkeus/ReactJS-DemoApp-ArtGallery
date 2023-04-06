@@ -44,7 +44,7 @@ export const Register = ({}) => {
 
     const onClick = (e) =>{
       e.preventDefault()
-      if(error==="undefined" || error ==="" && values.password === values.confirmPassword){
+      if(error==="undefined" || error ==="" && values.password === values.confirmPassword && values.password!==""){
         onSubmit(e)
       }else{
         blurPasswordHandler()

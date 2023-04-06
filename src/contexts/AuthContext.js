@@ -22,7 +22,7 @@ export const AuthProvider = ({
 
             navigate('/dashboard');
         } catch (error) {
-            alert("Wrong Username or Password!");
+            alert("Wrong Email or Password!");
         }
     };
 
@@ -39,7 +39,7 @@ export const AuthProvider = ({
 
             navigate('/dashboard');
         } catch (error) {
-            console.log('There is a problem');
+            alert("An account with that email already exists");
         }
     };
 

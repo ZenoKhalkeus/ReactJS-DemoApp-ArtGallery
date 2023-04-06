@@ -7,6 +7,7 @@ import { Dashboard } from './components/Dashboard/Dashboard';
 import { ArtworkProvider } from './contexts/ArtworkContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { Logout } from './components/Logout/Logout';
+import { Details } from './components/Details/Details';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/login' element ={<Login />} />
           <Route path='/register' element ={<Register />} />
           <Route path='/dashboard' element ={<Dashboard />} />
+          <Route path='/catalog/:artworkId' element ={<Details />} />
           <Route path='/logout' element ={<Logout />} />
         </Routes>
       </main>

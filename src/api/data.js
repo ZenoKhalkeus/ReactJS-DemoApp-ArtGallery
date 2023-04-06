@@ -13,9 +13,14 @@ export const serviceFactory = (token) => {
     
         return games;
     }
+    const getOne = async (id) =>{
+        const result = await request.get(`${url}/${id}`)
+        return result
+    }
 
     return {
-        getAll
+        getAll,
+        getOne
     }
 
 }
