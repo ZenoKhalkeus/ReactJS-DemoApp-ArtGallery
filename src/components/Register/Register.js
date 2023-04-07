@@ -48,7 +48,7 @@ export const Register = ({}) => {
         onSubmit(e)
       }else{
         blurPasswordHandler()
-        alert("Some criterias have not been met")
+        return
       }
     }
 

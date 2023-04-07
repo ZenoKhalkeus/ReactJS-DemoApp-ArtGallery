@@ -8,6 +8,8 @@ import { ArtworkProvider } from './contexts/ArtworkContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { Logout } from './components/Logout/Logout';
 import { Details } from './components/Details/Details';
+import { Create } from './components/Create/Create';
+import { Collection } from './components/Collection/Collection';
 
 
 function App() {
@@ -23,8 +25,10 @@ function App() {
           <Route path='/login' element ={<Login />} />
           <Route path='/register' element ={<Register />} />
           <Route path='/dashboard' element ={<Dashboard />} />
+          <Route path='/collection' element ={<Collection />} />
           <Route path='/catalog/:artworkId' element ={<Details />} />
           <Route path='/logout' element ={<Logout />} />
+          <Route path='/create' element ={<Create />} />
         </Routes>
       </main>
     

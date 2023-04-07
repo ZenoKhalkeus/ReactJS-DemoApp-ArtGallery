@@ -15,7 +15,7 @@
     top: 5%;
 }
 .details-info{
-    margin-top: 2%;
+    margin-top: 5%;
     width: 25%;
 }
 
@@ -26,6 +26,8 @@
     height: 80vh;
     border: 2px solid #15133d;
     border-radius: 2%;
+    max-width: 80%;
+    object-fit: cover;
 }
 
 /* Aside Bar */
@@ -35,6 +37,9 @@
     color: white;
     font-size: 24px;
 }
+.details-info h2{
+    margin-bottom: 2%;
+}
 
 .buttons{
     display: flex;
@@ -43,8 +48,8 @@
 
 .likes-count{
     width: 100%;
-    margin-top: 1%;
-    text-align: center;
+    margin-top: 5%;
+    text-align: inherit;
 }
 
 .buttons .btn-like, .buttons .btn-delete, .buttons .btn-edit{
@@ -52,6 +57,7 @@
     height: 40px;
     margin: 8px;
     margin-left: 0;
+    margin-right: auto;
     font-size: 20px;
     cursor: pointer;
     color: white;
@@ -109,6 +115,6 @@
 }
 
 .software p{
-    margin-bottom: 5px;
+    margin-bottom: 2%;
     margin-top: 1px;
 }

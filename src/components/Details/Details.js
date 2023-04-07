@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { getAuthor } from "../../api/authorService"
 import { serviceFactory } from "../../api/data"
 
 import { useAuthContext } from "../../contexts/AuthContext"
@@ -19,12 +20,22 @@ export const Details = () => {
     useEffect(()=>{
         artworkService.getOne(artworkId)
             .then(result =>{
+                console.log(result)
                 setArtwork(result)
             })
     }, [artworkId])
 
     const isOwner = artwork._ownerId === userId
     let softwareUsed = artwork.software
+
+    const [author, setAuthor] = useState("Name")
+    useEffect(()=>{
+         getAuthor(artworkId) 
+        .then(result => {
+            setAuthor(result.author.email)
+        })
+    },[])
+
 
     function softwarePNG(softwareUsed) {
         switch(softwareUsed) {
@@ -36,7 +47,11 @@ export const Details = () => {
                 break;
             case "Traditional":
                 return "https://www.pngitem.com/pimgs/m/46-466311_paint-brush-png-image-chinese-paint-brush-png.png"
-            default: return null
+                break;
+            case "Clip Studio Paint":
+                return "https://upload.wikimedia.org/wikipedia/en/6/66/Clip_Studio_Paint_app_logo.png"
+                break;
+            default: return "https://www.nicepng.com/png/detail/8-86408_free-download-question-mark-brush-stroke.png"
              
         }
     }
@@ -47,17 +62,22 @@ export const Details = () => {
                 <img src={artwork.imageUrl} alt="placeholderimg"/>
             </div>
             <aside className="details-info">
-                <h2 className="author">Author: Name</h2>
-                <div className="buttons">
-                <button className="btn-like">Like</button>
-                <button className="btn-delete">Delete</button>
-                <button className="btn-edit">Edit</button>
+                <h2 className="author">Author: {author}</h2>
+                {isOwner?  
+                    (<div className="buttons">
+                        <button className="btn-delete">Delete</button>
+                        <button className="btn-edit">Edit</button>
+                    </div>): user?
+                    (<div className="buttons">
+                        <button className="btn-like">Like</button>
+                    </div>) : null
+                }
                 <div className="likes-count">Likes: 100</div>
-                </div>
+                
 
                 <div>
                     <h3 className="title">
-                        {artwork.title}
+                        Title: {artwork.title}
                     </h3>
                     <h4 className="desc">
                         {artwork.summary}

@@ -18,9 +18,23 @@ export const serviceFactory = (token) => {
         return result
     }
 
+    const create = async(data) => {
+        const result = await request.post(url, data)
+
+        return result
+    }
+
+    const getOwn = async(id) =>{
+        const result = await request.get(`${url}?where=_ownerId%20LIKE%20%22${id}%22`)
+        return result
+    }
+
+
     return {
         getAll,
-        getOne
+        getOne,
+        create,
+        getOwn
     }
 
 }

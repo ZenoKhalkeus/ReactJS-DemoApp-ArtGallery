@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const useLocalStorage = (key, initialValue) => {
-    // const key = useId();
+    // to keep a persistent Local Storage;
     const [state, setState] = useState(() => {
         const persistedStateSerialized = localStorage.getItem(key);
         if (persistedStateSerialized) {
