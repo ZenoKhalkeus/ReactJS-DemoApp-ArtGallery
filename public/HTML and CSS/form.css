@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 
-.form {
+.form, .search-form {
   font-family: "Delicious Handrawn", sans-serif;
   background: white;
   max-width: 560px;
@@ -25,7 +25,7 @@
   font-size: 50px;
 }
 
-.form input {
+.form input, .search-form input{
   font-family: "Delicious Handrawn", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -39,7 +39,10 @@
   font-size: 24px;
   
 }
-.form textarea {
+.search-form input{
+  margin: 0%
+}
+.form textarea{
   border: 1px solid rgb(206, 206, 206);
   width: 90%;
   max-width: 99%;
@@ -48,7 +51,7 @@
   margin-bottom: 10px;
   background-color: rgb(242, 242, 242);
 }
-.form button {
+.form button, .search-form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -107,4 +110,36 @@
   margin-bottom: 1%;
   padding: 5px;
   color: red;
+}
+
+.search-form {
+  display: flex;
+  position: absolute;
+  margin-top: 4.5%;
+  margin-left: 15%;
+  top: -8.5%;
+  left: 10%;
+  max-width: 400px;
+  padding: 10px;
+  padding-left: 3%;
+  padding-right: 3%;
+
+}
+.search-form button {
+  margin-top: 0%;
+  margin-left: 5%;
+}
+.search-form .error-field {
+  font-size: 16px;
+  width: 250px;
+}
+
+.img-edit img {
+    width: 30%;
+    left: 5%;
+    bottom: 8%;
+    height: 80vh;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 2em;
 }

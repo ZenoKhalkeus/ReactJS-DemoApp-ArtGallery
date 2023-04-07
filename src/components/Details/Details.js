@@ -2,28 +2,62 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getAuthor } from "../../api/authorService"
 import { serviceFactory } from "../../api/data"
+import { useNavigate } from "react-router-dom"
+
 
 import { useAuthContext } from "../../contexts/AuthContext"
 import { useService } from "../../hooks/useService"
+import { useArtworkContext } from "../../contexts/ArtworkContext";
 
 
 export const Details = () => {
 
+    const navigate = useNavigate()
     const {userId, isAuthenticated} = useAuthContext()
+    const {deleteArtwork} = useArtworkContext()
     const {artworkId} = useParams()
     const [artwork, setArtwork] = useState({})
-    const artworkService = useService(serviceFactory)
+    const [likes, setLikes] = useState(0)
+    const [ownLike, setOwnLike] =  useState(false)
 
+    const artworkService = useService(serviceFactory)
 
     let user = Boolean(isAuthenticated)
 
     useEffect(()=>{
         artworkService.getOne(artworkId)
             .then(result =>{
-                console.log(result)
                 setArtwork(result)
             })
     }, [artworkId])
+
+    useEffect(()=>{
+        artworkService.getNumberOfLikes(artworkId)
+        .then(result => {
+            setLikes(result)
+        })
+    },[likes])
+
+    useEffect(()=>{
+        artworkService.getOwnLike(artworkId, userId)
+        .then(result => {
+            if(result === 1){
+                setOwnLike(true)
+
+            }
+            
+        })
+    },[likes])
+
+    const onLike = () =>{
+        artworkService.like(artworkId)
+        artworkService.getNumberOfLikes(artworkId)
+        .then(result => {
+            setLikes(result)
+        })
+    }
+
+
 
     const isOwner = artwork._ownerId === userId
     let softwareUsed = artwork.software
@@ -35,6 +69,18 @@ export const Details = () => {
             setAuthor(result.author.email)
         })
     },[])
+
+    const onDeleteClick = async () => {
+        // eslint-disable-next-line no-restricted-globals
+        const result = confirm(`Are you sure you want to delete ${artwork.title}`);
+
+        if (result) {
+            await artworkService.delete(artworkId);
+
+            deleteArtwork(artworkId);
+
+        }
+    };
 
 
     function softwarePNG(softwareUsed) {
@@ -56,6 +102,10 @@ export const Details = () => {
         }
     }
 
+    function navigateLink () {
+        navigate(`/edit/${artworkId}`)
+    }
+
     return (
         <div className="details-container">
             <div className="img-background">
@@ -65,14 +115,14 @@ export const Details = () => {
                 <h2 className="author">Author: {author}</h2>
                 {isOwner?  
                     (<div className="buttons">
-                        <button className="btn-delete">Delete</button>
-                        <button className="btn-edit">Edit</button>
-                    </div>): user?
+                        <button className="btn-delete" onClick={onDeleteClick}>Delete</button>
+                        <button className="btn-edit" onClick={navigateLink}>Edit</button>
+                    </div>): user && !ownLike?
                     (<div className="buttons">
-                        <button className="btn-like">Like</button>
+                        <button className="btn-like" onClick={onLike}>Like</button>
                     </div>) : null
                 }
-                <div className="likes-count">Likes: 100</div>
+                <div className="likes-count">Likes: {likes}</div>
                 
 
                 <div>

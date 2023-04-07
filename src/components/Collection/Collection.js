@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import { Link } from 'react-router-dom'
+
 import { useAuthContext } from "../../contexts/AuthContext"
 import { serviceFactory } from "../../api/data"
 import { SingularItem } from "./SingularItem"
@@ -25,7 +27,7 @@ export const Collection = () => {
             {ownArtworks.length === 0 && (
                 <section className="no-content">
                 <h2>No content</h2>
-                <h4>Upload one <a href="/">here</a></h4>
+                <h4>Upload one <Link to="/create">here</Link></h4>
                 </section>
             )}
             {ownArtworks.map(x =>

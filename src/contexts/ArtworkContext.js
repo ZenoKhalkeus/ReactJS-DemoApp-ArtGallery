@@ -13,7 +13,7 @@ export const ArtworkProvider = ({
     const navigate = useNavigate();
     const [artworks, setArtworks] = useState([]);
     const artService = serviceFactory();
-    const[ownArtworks, setOwnArtworks] = useState([])
+
 
     useEffect(() => {
         artService.getAll()
@@ -36,10 +36,25 @@ export const ArtworkProvider = ({
         navigate('/dashboard')
     }
 
+    const onEditSubmit = async(values) =>{
+        const result = await artService.edit(values._id, values);
+
+        setArtworks(state => state.map(x => x._id === values._id ? result : x))
+
+        navigate(`/catalog/${values._id}`)
+    }
+
+    const deleteArtwork = (artworkId) => {
+        setArtworks(state => state.filter(artwork => artwork._id !== artworkId));
+        navigate('/dashboard')
+    };
+
     const contextValues = {
         artworks,
         getArtwork,
         onCreateSubmit,
+        deleteArtwork,
+        onEditSubmit
 
     };
 

@@ -1,17 +1,38 @@
 import { useArtworkContext } from "../../contexts/ArtworkContext"
 import { useForm } from "../../hooks/useForm"
+import { useParams } from "react-router-dom"
+
+import { serviceFactory } from "../../api/data"
+import { useService } from "../../hooks/useService"
 
 import {useState, useEffect} from "react"
 
-export const Create = () => {
+export const Edit = () => {
 
-    const {onCreateSubmit} = useArtworkContext()
-    const {values, changeHandler, onSubmit} = useForm({
+
+    const {artworkId} = useParams()
+    const [artwork, setArtwork] = useState({})
+    const {onEditSubmit} = useArtworkContext()
+    const artworkService = useService(serviceFactory)
+
+
+
+
+    const {values, changeHandler, onSubmit, changeValues} = useForm({
+        _id: '',
         title: '',
         summary: '',
         imageUrl: '',
         software: ''
-    },onCreateSubmit)
+    },onEditSubmit)
+
+    useEffect(()=>{
+        artworkService.getOne(artworkId)
+            .then(result =>{
+                setArtwork(result)
+                changeValues(result)
+            })
+    }, [artworkId])
 
    const [error, setError] =  useState()
 
@@ -32,15 +53,18 @@ export const Create = () => {
 
     return (
         <section id="create">
+            <div className="img-edit">
+                <img src={artwork.imageUrl} alt="placeholderimg"/>
+            </div>  
         <div className="form create" method="post" onSubmit={onSubmit}>
-          <h2>Add an artwork</h2>
+          <h2>Edit an artwork</h2>
           <form className="create-form">
             <p className="form-info">Title</p>
             <input
               type="text"
               name="title"
               id="title"
-              placeholder="Lady with a pearl earring"
+              placeholder={artwork.title}
               value={values.title} 
               onChange={changeHandler}
             />
@@ -49,7 +73,7 @@ export const Create = () => {
               type="text"
               name="summary"
               id="summary"
-              placeholder="Summary of the piece"
+              placeholder={artwork.summary}
               value={values.summary} 
               onChange={changeHandler}
             />
@@ -58,7 +82,7 @@ export const Create = () => {
               type="text"
               name="imageUrl"
               id="img-background"
-              placeholder="www.lorem.lorem.png"
+              placeholder={artwork.imageUrl}
               value={values.imageUrl} 
               onChange={changeHandler}
             />
@@ -67,12 +91,12 @@ export const Create = () => {
               type="text"
               name="software"
               id="software"
-              placeholder="Photoshop"
+              placeholder={artwork.software}
               value={values.software} 
               onChange={changeHandler}
             />
             <p className="error-field">{error}</p>
-            <button type="submit" onClick={onClick}>Upload</button>
+            <button type="submit" onClick={onClick}>Edit</button>
           </form>
         </div>
       </section>

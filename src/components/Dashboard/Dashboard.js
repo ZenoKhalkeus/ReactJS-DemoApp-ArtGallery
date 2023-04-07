@@ -1,6 +1,8 @@
 import { useArtworkContext } from "../../contexts/ArtworkContext"
 import { SingularItem } from "./SingularArtwork"
 
+import { Link } from 'react-router-dom'
+
 export const Dashboard = () => {
     const { artworks } = useArtworkContext()
 
@@ -9,7 +11,7 @@ export const Dashboard = () => {
             {artworks.length === 0 && (
                 <section className="no-content">
                 <h2>No content</h2>
-                <h4>Upload one <a href="/">here</a></h4>
+                <h4>Upload one <Link to="/create">here</Link></h4>
                 </section>
             )}
             {artworks.map(x =>

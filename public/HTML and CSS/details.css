@@ -65,6 +65,10 @@
     border-radius: 0.5em;
 }
 
+.btn-edit a{
+    text-decoration: none;
+}
+
 .buttons .btn-like{
     background-color: #5cb85c;
     border-color: #4cae4c;

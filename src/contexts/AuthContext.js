@@ -43,6 +43,7 @@ export const AuthProvider = ({
         }
     };
 
+
     const onLogout = async () => {
         await authService.logout();
 

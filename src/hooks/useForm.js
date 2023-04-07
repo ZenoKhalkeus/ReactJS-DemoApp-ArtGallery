@@ -16,11 +16,17 @@ export const useForm = (initialValues, onSubmitHandler) => {
 
         setValues(initialValues);
     };
+
+    const changeValues = (newValues) => {
+        // For Edit Form to change the values to the previous ones
+        setValues(newValues);
+    };
     
 
     return {
         values,
         changeHandler,
         onSubmit,
+        changeValues
     }
 }

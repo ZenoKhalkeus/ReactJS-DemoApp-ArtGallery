@@ -10,6 +10,8 @@ import { Logout } from './components/Logout/Logout';
 import { Details } from './components/Details/Details';
 import { Create } from './components/Create/Create';
 import { Collection } from './components/Collection/Collection';
+import { Search } from './components/Search/Search';
+import { Edit } from './components/Edit/Edit';
 
 
 function App() {
@@ -27,8 +29,10 @@ function App() {
           <Route path='/dashboard' element ={<Dashboard />} />
           <Route path='/collection' element ={<Collection />} />
           <Route path='/catalog/:artworkId' element ={<Details />} />
+          <Route path='/edit/:artworkId' element ={<Edit />} />
           <Route path='/logout' element ={<Logout />} />
           <Route path='/create' element ={<Create />} />
+          <Route path='/search' element ={<Search />} />
         </Routes>
       </main>
     
