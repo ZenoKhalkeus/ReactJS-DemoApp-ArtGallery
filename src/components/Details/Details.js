@@ -41,7 +41,7 @@ export const Details = () => {
     useEffect(()=>{
         artworkService.getOwnLike(artworkId, userId)
         .then(result => {
-            if(result === 1){
+            if(result > 0){
                 setOwnLike(true)
 
             }
