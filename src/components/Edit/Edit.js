@@ -1,3 +1,5 @@
+import './Edit.css';
+
 import { useArtworkContext } from "../../contexts/ArtworkContext"
 import { useForm } from "../../hooks/useForm"
 import { useParams } from "react-router-dom"
@@ -35,6 +37,8 @@ export const Edit = () => {
     }, [artworkId])
 
    const [error, setError] =  useState()
+
+   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
 
 
     const onClick = (e) =>{

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+.grouped-job-container{
+    display: flex;
+    gap: 2%;
+    flex-flow: row wrap;
+}
+
+.job-container{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 22%;
+    height: 15vh;
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid white;
+    background-color: rgb(32, 26, 26);
+    opacity: 90%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.job-container .logo img{
+    margin-top: 45%;
+    margin-left: 50%;
+    width: 80px;
+    height: 80px;
+   
+}
+
+.jobcontent{
+    font-family: "Delicious Handrawn", sans-serif;
+    text-decoration: none;
+    width: 50%;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    
+}
+
+.jobcontent .position{
+    margin-bottom: 0;
+}
+.jobcontent .salary{
+    margin-top: 2%;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+/* No content */
+
+.no-content{
+    font-family: "Delicious Handrawn", sans-serif;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 45%
+}
+
+.no-content h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+    
+}
+
+.no-content h4{
+    color: white;
+    font-size: 48px;
+    
+}
+
+.no-content h4 a:hover{
+    cursor: pointer;
+    color: darkblue;
+}
+
+.no-content h4 a{
+    color: white;
+    text-decoration: none;
+}

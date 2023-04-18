@@ -29,19 +29,35 @@ export const ArtworkProvider = ({
     };
 
     const onCreateSubmit = async (data) => {
-        const newArtwork = await artService.create(data)
+        try{
+            const newArtwork = await artService.create(data)
 
-        setArtworks(state => [...state, newArtwork])
+            setArtworks(state => [...state, newArtwork])
 
-        navigate('/dashboard')
+            navigate('/dashboard')
+        }catch(error){
+            if(error.code==401){
+                alert("Unauthorized access")
+            }else{
+                alert("Server is unavailable. Please try again later!")
+            }
+        }
     }
 
     const onEditSubmit = async(values) =>{
-        const result = await artService.edit(values._id, values);
+        try{
+            const result = await artService.edit(values._id, values);
 
-        setArtworks(state => state.map(x => x._id === values._id ? result : x))
+            setArtworks(state => state.map(x => x._id === values._id ? result : x))
 
-        navigate(`/catalog/${values._id}`)
+            navigate(`/catalog/${values._id}`)
+        }catch(error){
+            if(error.code==403){
+                alert("Unauthorized access")
+            }else{
+                alert("Server is unavailable. Please try again later!")
+            }
+        }
     }
 
     const deleteArtwork = (artworkId) => {

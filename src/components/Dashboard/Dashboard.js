@@ -1,7 +1,9 @@
+import './Dashboard.css';
+
 import { useArtworkContext } from "../../contexts/ArtworkContext"
-import { SingularItem } from "./SingularArtwork"
 
 import { Link } from 'react-router-dom'
+import { SingularArtwork } from '../SingularArtwork/SingularArtwork';
 
 export const Dashboard = () => {
     const { artworks } = useArtworkContext()
@@ -15,7 +17,7 @@ export const Dashboard = () => {
                 </section>
             )}
             {artworks.map(x =>
-                <SingularItem key={x._id} {...x} />
+                <SingularArtwork key={x._id} {...x} />
             )}
             
         </div>

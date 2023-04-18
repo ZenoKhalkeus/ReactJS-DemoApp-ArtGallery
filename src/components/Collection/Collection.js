@@ -1,10 +1,12 @@
+import './Collection.css';
+
 import { useEffect, useState } from "react"
 
 import { Link } from 'react-router-dom'
 
 import { useAuthContext } from "../../contexts/AuthContext"
 import { serviceFactory } from "../../api/data"
-import { SingularItem } from "./SingularItem"
+import { SingularArtwork } from '../SingularArtwork/SingularArtwork'
 import { useService } from "../../hooks/useService"
 
 export const Collection = () => {
@@ -31,7 +33,7 @@ export const Collection = () => {
                 </section>
             )}
             {ownArtworks.map(x =>
-                <SingularItem key={x._id} {...x} />
+                <SingularArtwork key={x._id} {...x} />
             )}
             
         </div>

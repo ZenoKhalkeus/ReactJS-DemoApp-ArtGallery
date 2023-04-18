@@ -1,9 +1,10 @@
+import './Search.css';
 import { useEffect, useState } from "react"
 
 import { useForm } from "../../hooks/useForm";
 
 import { serviceFactory } from "../../api/data"
-import { SingularItem } from "./SingularItem"
+import { SingularArtwork } from '../SingularArtwork/SingularArtwork';
 import { useService } from "../../hooks/useService"
 
 export const Search = () => {
@@ -52,7 +53,7 @@ export const Search = () => {
                 </section>
             )}
             {searchResult.map(x =>
-                <SingularItem key={x._id} {...x} />
+                <SingularArtwork key={x._id} {...x} />
             )} 
 
         <div className="class-form" >

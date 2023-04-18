@@ -1482,6 +1482,54 @@
       },
     },
     likes: {},
+    job: {
+      "1840a313-225c-416a-817a-9954e5609f7c": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        name: "SoftUni",
+        position: "2D Artist",
+        email: "university@softuni.bg",
+        salary: "100000$",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_Software_University_%28SoftUni%29_-_blue.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        requirements: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        _createdOn: 1617194210926,
+      },
+      "1840a313-225c-416a-817a-9954e5609l7c": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        name: "SoftUni",
+        email: "university@softuni.bg",
+        position: "Technical Artist",
+        salary: "120000$",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_Software_University_%28SoftUni%29_-_blue.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        requirements: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        _createdOn: 1617194210926,
+      },
+      "2940a313-225c-416a-817a-9954e5609f7c": {
+        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+        name: "Facebook",
+        position: "Graphic Designer",
+        email: "careers@facebook.com",
+        salary: "80000$",
+        logo: "https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        requirements: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        _createdOn: 1617194210927,
+      },
+      "2940a313-225c-416a-817a-9954e5609f7n": {
+        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+        name: "Coca Cola",
+        position: "3D Artist",
+        salary: "120000$",
+        email: "careers@cocacola.com",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        requirements: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nobis eveniet laudantium totam obcaecati fugit sed officiis asperiores iure qui saepe, fugiat, corporis natus aliquid, consectetur est repudiandae praesentium sequi! Necessitatibus accusamus enim nam, similique et est minima ipsam quisquam dolorum, quae reiciendis commodi voluptates deleniti blanditiis officia sunt. Obcaecati?",
+        _createdOn: 1617194210937,
+      },
+
+    },
+    applications: {}
   };
   var rules$1 = {
     users: {

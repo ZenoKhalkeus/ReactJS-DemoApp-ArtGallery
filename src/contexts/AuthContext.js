@@ -22,7 +22,12 @@ export const AuthProvider = ({
 
             navigate('/dashboard');
         } catch (error) {
-            alert("Wrong Email or Password!");
+            if(error.code==403){
+                alert("Wrong Email or Password!")
+            }else{
+                alert("Server is unavailable. Please try again later!")
+            }
+            
         }
     };
 
@@ -39,7 +44,12 @@ export const AuthProvider = ({
 
             navigate('/dashboard');
         } catch (error) {
-            alert("An account with that email already exists");
+            if(error.code==409){
+                alert("An account with that email already exists");
+            }else{
+                alert("Server is unavailable. Please try again later!")
+            }
+            
         }
     };
 

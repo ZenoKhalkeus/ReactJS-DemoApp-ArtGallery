@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+.grouped-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+
+.no-content{
+    font-family: "Delicious Handrawn", sans-serif;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 45%
+}
+
+.no-content h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+    
+}
+
+.no-content h4{
+    color: white;
+    font-size: 48px;
+    
+}
+
+.no-content h4 a:hover{
+    cursor: pointer;
+    color: darkblue;
+}
+
+.no-content h4 a{
+    color: white;
+    text-decoration: none;
+}

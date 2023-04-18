@@ -1,3 +1,5 @@
+import './Details.css';
+
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getAuthor } from "../../api/authorService"
@@ -51,6 +53,7 @@ export const Details = () => {
 
     const onLike = () =>{
         artworkService.like(artworkId)
+        setLikes(likes+1)
         artworkService.getNumberOfLikes(artworkId)
         .then(result => {
             setLikes(result)

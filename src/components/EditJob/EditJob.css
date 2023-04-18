@@ -1,0 +1,56 @@
+label {
+    margin-top: 10px;
+    display: block;
+    font-size: 24px;
+    
+  }
+
+  .job-form textarea{
+    margin-top: 10px;
+    width: 80%;
+    background-color: #e8f0fe;
+    margin-bottom: 0;
+    resize: none;
+  }
+  
+  .job-form{
+    margin-top: 1%;
+    margin-bottom: 0;
+  }
+  
+  .job-form{
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+  } 
+  
+  .jobForm-input{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+  }
+  
+  #company-email{
+    margin-right: auto;
+  }
+  
+  .job-form input{
+    margin-bottom: 0;
+    width: 250px;
+    height: 4vh;
+    margin-bottom: 1%;
+  }
+  
+  .job-create-info{
+    font-size: 20px;
+  }
+  
+  #create-job{
+    margin-bottom: 0;
+  }
+  
+  footer{
+    display: none 
+  }

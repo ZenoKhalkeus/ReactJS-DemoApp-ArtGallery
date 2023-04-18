@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+.job-details-container{
+    background: rgba(7, 15, 20, 0.9);
+    height: 100vh;
+    
+}
+
+.company-logo{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.companyName{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.company-logo img{
+    margin-top: 2%;
+    width: 112px;
+    height: 112px;
+}
+
+.job-buttons .job-btn-apply, .job-buttons .job-btn-delete, .job-buttons .job-btn-edit{
+    width: 14%;
+    height: 40px;
+    margin: 8px;
+    margin-left: 43%;
+    margin-right: auto;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+    border-radius: 0.5em;
+    background-color: #5cb85c;
+}
+
+.job-buttons .job-btn-apply:hover{
+    background-color: #449c61
+}
+
+.job-buttons .job-btn-delete{
+    background-color: #c45454;
+    border-color: #b44a4a;
+}
+
+.job-buttons .job-btn-delete:hover{
+    background-color: #973834
+}
+
+.job-buttons .job-btn-edit{
+    background-color: #13aff0;
+    border-color: #0e9fdc;
+}
+
+.job-buttons .job-btn-edit:hover{
+    background-color: #1243c9
+}
+
+.position-salary{
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Delicious Handrawn", sans-serif;
+    letter-spacing: 3px;
+    margin-top: 2%;
+}
+
+.applications-count{
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.job-info, .applications-count{
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 20px;
+}
+
+.job-details-info{
+    width: 100%;
+}

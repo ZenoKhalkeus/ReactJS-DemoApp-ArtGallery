@@ -4,6 +4,8 @@ const baseUrl = 'http://localhost:3030'
 
 const url = `${baseUrl}/data/artwork`
 
+const jobUrl = `${baseUrl}/data/job`
+
 export const serviceFactory = (token) => {
     const request = requestFactory(token);
 
@@ -58,6 +60,45 @@ export const serviceFactory = (token) => {
 
     const deleteArtwork = (artworkId) => request.delete(`${url}/${artworkId}`);
 
+    // Jobs
+
+    const getAllJobs = async () => {
+        const result = await request.get(jobUrl);
+        const games = Object.values(result);
+    
+        return games;
+    }
+    const getOneJob = async (id) =>{
+        const result = await request.get(`${jobUrl}/${id}`)
+        return result
+    }
+
+    const createJob = async(data) => {
+        const result = await request.post(jobUrl, data)
+
+        return result
+    }
+
+    
+    const editJob = (jobId, data) => request.put(`${jobUrl}/${jobId}`, data);
+
+    const deleteJob = (jobId) => request.delete(`${jobUrl}/${jobId}`);
+
+    const apply = async (jobId) =>{
+        const result = await request.post(`${baseUrl}/data/applications`,{
+            jobId
+        })
+
+        return result
+    }
+
+    const getNumberOfApplications = async(jobId) =>{
+        const result = await request.get(`${baseUrl}/data/applications?where=jobId%3D%22${jobId}%22&distinct=_ownerId&count`)
+        console.log(result)
+            return result
+        }
+    
+
     return {
         getAll,
         getOne,
@@ -68,7 +109,14 @@ export const serviceFactory = (token) => {
         getNumberOfLikes,
         getOwnLike,
         delete: deleteArtwork,
-        edit
+        edit,
+        getAllJobs,
+        getOneJob,
+        createJob,
+        editJob,
+        deleteJob,
+        getNumberOfApplications,
+        apply,
 
     }
 

@@ -1,6 +1,8 @@
+import './SingularArtwork.css';
+
 import { Link } from "react-router-dom";
 
-export const SingularItem = ({
+export const SingularArtwork = ({
     _id,
     title,
     summary,
