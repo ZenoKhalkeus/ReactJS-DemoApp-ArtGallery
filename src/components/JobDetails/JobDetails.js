@@ -30,33 +30,11 @@ export const JobDetails = () => {
             .then(result =>{
                 setJob(result)
             })
+        jobService.getNumberOfApplications(jobId).then(result => {
+                setApplications(result)
+            })
     }, [jobId])
 
-    // useEffect(()=>{
-    //     artworkService.getNumberOfLikes(artworkId)
-    //     .then(result => {
-    //         setLikes(result)
-    //     })
-    // },[likes])
-
-    // useEffect(()=>{
-    //     artworkService.getOwnLike(artworkId, userId)
-    //     .then(result => {
-    //         if(result > 0){
-    //             setOwnLike(true)
-
-    //         }
-            
-    //     })
-    // },[likes])
-
-    // const onLike = () =>{
-    //     artworkService.like(artworkId)
-    //     artworkService.getNumberOfLikes(artworkId)
-    //     .then(result => {
-    //         setLikes(result)
-    //     })
-    // }
 
 
 

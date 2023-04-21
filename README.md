@@ -1,4 +1,50 @@
-SoftUni Project Defense ReactJS App Demo
+
+# SoftUni Project Defense ReactJS App Demo
+
+This is a Project for SoftUni's Project Defense, using React, HTML and CSS and SoftUni's practice server.
+
+Everything's for learning purposes, no copyright infringement intended
+
+## Functionalities
+
+Guest: 
+* view Dashboard
+* view Artwork Details
+* Login
+* Register
+
+User:
+
+* Search
+* View Own Collection
+* Edit and Delete (If Owner of Artwork/Job)
+* Like
+* Create Artwork/Job
+* Apply to Job
+
+# Some Site Images
+
+## Dashboard
+
+![](https://i.imgur.com/26BdSWj.png)
+
+## Register
+
+![](https://i.imgur.com/eYzcqTV.png)
+
+## Search
+
+![](https://i.imgur.com/UCLHBw3.png)
+
+## Details
+
+![](https://i.imgur.com/PgIGY0B.png)
+
+## Edit
+
+![](https://i.imgur.com/d1Fwisd.png)
+
+------
 
 # Getting Started with Create React App
 

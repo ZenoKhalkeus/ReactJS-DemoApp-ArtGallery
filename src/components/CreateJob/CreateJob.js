@@ -61,7 +61,7 @@ export const CreateJob = () => {
               type="text"
               name="logo"
               id="logo"
-              placeholder="Logo of your company - e.g. .png link"
+              placeholder="Logo of your company"
               value={values.logo} 
               onChange={changeHandler}
             />
